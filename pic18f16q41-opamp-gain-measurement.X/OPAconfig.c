@@ -142,7 +142,12 @@ void measureGain(void)
     //Other parts and voltages may require tuning
     if (signalOut >= 0x0FF0)
     {
-        sendString("[WARNING] Signal is near or at measurement limits.", 1);
+        const char msg[] = "[WARNING] Signal is near or at measurement limits.\n\r";
+#ifdef ENABLE_FLOATING_PT
+        printf(msg);
+#else
+        sendString(msg, 0);
+#endif
     }
     
     //Find and print the gain of the op-amp    
