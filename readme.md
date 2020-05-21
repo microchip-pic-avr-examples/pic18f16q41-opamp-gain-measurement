@@ -66,14 +66,19 @@ The default configuration is floating point mode.
 There are 2 define statements in this example which can be used to change the behavior of the code example. Both define statements are present in the file "OPAconfig.h".
 
 - **ENABLE_CHANGING_GAIN**
-  - This option disables the gain switching demo on the code example. For correct operation, this option **must be disabled** when using external resistors. Gain measurement limit is 999.
+  - This option disables the gain switching demo on the code example. For correct operation, this option **must be disabled** when using external resistors (1). Gain measurement limit is 999.
 
 - **ENABLE_FLOATING_PT**
   - This option selects the use of floating points for gain calculation, rather than fixed point numbers. Enabling this option provides an increase in the accuracy of the gain measurement, however it significantly increases code size and computation time.
 
+  **Note:**
+  1. To use external gain resistors, a reconfiguration of the OPA module in MCC is required. 
+
 ### Analog Troubleshooting
 #### Incorrect Gains
-This program is dependent on RB5's input to determine the gain of the operational amplifier. For proper operation, RB5 should be <300mV to ensure proper operation. If a source or potentiometer is unavailable, one of the DACs can be repurposed as a substitute for RB5's input.
+This program is dependent on RB5's input to determine the gain of the operational amplifier. For proper operation, RB5 should be <300mV to ensure proper operation for the internal gain of 16. User defined gains may have different requirements.
+
+If a source or potentiometer is unavailable, one of the DACs can be repurposed as a substitute for RB5's input.
 
 For further verification, RC2 is always the output of the OPA module if the module is enabled and running. The output should be 1 step above the last printed statement (ex: if gain was estimated around 2, the current gain should be 4).
 
