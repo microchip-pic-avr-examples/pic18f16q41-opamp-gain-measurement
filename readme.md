@@ -53,11 +53,11 @@ The gain calculated is printed through the UART at 9600 baud.
 
 The program can be run in fixed point or floating point mode - in fixed point, resolution is limited is limited to +- 1/16, but the program is faster and much smaller. In floating point mode, resolution is much better, but the program is much bigger and slower. The default configuration is floating point mode.
 
-<img src="images/GainMeasurement_FloatingPoint.PNG" alt="Output - Floating Point">
+<img src="images/FloatingPoint.PNG" alt="Output - Floating Point">
 
 *Figure 1 - Floating Point Measurement*
 
-<img src="images/GainMeasurement_FixedPoint.PNG" alt="Output - Fixed Point">
+<img src="images/FixedPoint.PNG" alt="Output - Fixed Point">
 
 *Figure 2 - Fixed Point Measurement*
 
