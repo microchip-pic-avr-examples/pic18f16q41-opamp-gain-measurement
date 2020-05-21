@@ -71,8 +71,8 @@ There are 2 define statements in this example which can be used to change the be
 - **ENABLE_FLOATING_PT**
   - This option selects the use of floating points for gain calculation, rather than fixed point numbers. Enabling this option provides an increase in the accuracy of the gain measurement, however it significantly increases code size and computation time.
 
-  **Note:**
-  1. To use external gain resistors, a reconfiguration of the OPA module in MCC is required. 
+**Note:**
+  1. To use external gain resistors, a reconfiguration of the OPA module in MCC is required.
 
 ### Analog Troubleshooting
 #### Incorrect Gains
