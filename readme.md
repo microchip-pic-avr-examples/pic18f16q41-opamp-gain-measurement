@@ -2,18 +2,12 @@
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
 # Gain measurement of the OPA module on PIC18F16Q41
-This code example measures the gain of the Operational Amplifier (OPA) module on the Q41. To do so, the module utilizes the ADCC with a reference of Vdd and Vss.
-
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+This code example measures the gain of the Operational Amplifier (OPA) module on the PIC18F16Q41. Internally, this project uses the ADCC on the device to sample both the input and the output, and then computes the gain using either fixed point or floating point numbers.
 
 ## Related Documentation
 
 <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a>
-
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 
 ## Software Used
 
@@ -22,35 +16,26 @@ This code example measures the gain of the Operational Amplifier (OPA) module on
 * <a href="https://www.microchip.com/mplab/mplab-code-configurator">MPLAB® Code Configurator (MCC) 3.95.0 or newer</a>
 * Serial Terminal
 
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
-
 ## Hardware Used
 
 * <a href="https://www.microchip.com/Developmenttools/ProductDetails/ADM00393">MCP2200 USB-UART Evaluation Board (ADM00393)</a>
-    * Baud Rate is 9600 for this example
 * <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137) </a>
 * Power Supply or Potentiometer
   * RC0 on the Curiosity board can be used with a wire from RC0 to RB5.
 
 ## Setup
-
 #### External Pins
 
 | Pin | Name     | Description
 | --- | -------- | -----------
 | RC2 | OPA1OUT  | Output of the operational amplifier
-| RB7 | UART TX  | UART TX
+| RB7 | UART TX  | UART TX (9600 BAUD)
 | RB5 | OPA1IN0+ | Input to the OPA module (1).
 
 Note:
 1. RB5 is used so that the output is equal to gain x input. Input should be < 300mV to properly calculate the 16x range.
 
-#### Curiosity Board Pins
+#### Curiosity Board Parts
 
 | Pin | Function
 | --- | --------
@@ -68,11 +53,11 @@ The gain calculated is printed through the UART at 9600 baud.
 
 The program can be run in fixed point or floating point mode - in fixed point, resolution is limited is limited to +- 1/16, but the program is faster and much smaller. In floating point mode, resolution is much better, but the program is much bigger and slower. The default configuration is floating point mode.
 
-<img src="images/GainMeasurement_FloatingPoint.png" alt="Output - Floating Point">
+<img src="images/GainMeasurement_FloatingPoint.PNG" alt="Output - Floating Point">
 
 *Figure 1 - Floating Point Measurement*
 
-<img src="images/GainMeasurement_FixedPoint.png" alt="Output - Fixed Point">
+<img src="images/GainMeasurement_FixedPoint.PNG" alt="Output - Fixed Point">
 
 *Figure 2 - Fixed Point Measurement*
 
