@@ -23,9 +23,9 @@ void sendString(const char* str, uint8_t sendEOL)
     END_OF_LINE;
 }
 
-void sendStringSafe(const char* str, int size)
+void sendStringSafe(const char* str, uint8_t size)
 {
-    int index = 0;
+    uint8_t index = 0;
     while (index < size)
     {
         UART1_Write(str[index]); 
