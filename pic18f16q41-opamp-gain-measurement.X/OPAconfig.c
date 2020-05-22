@@ -12,12 +12,14 @@ const char* decStrings4[] = {".0", ".06125" ,".125", ".1875", ".25",
 //Returns the remainder, and subtracts from the numerator during the division.
 uint16_t inline fastDivide(uint16_t* numer, uint16_t divisor)
 {
+    TIMING_LED_SetHigh();
     uint16_t count = 0;
     while (*numer >= divisor)
     {
         *numer -= divisor;
         count++;
     }
+    TIMING_LED_SetLow();
     return count;
 }
 
@@ -31,7 +33,8 @@ void debugOutput(uint16_t signalIn, uint16_t signalOut)
 
 void calculateGain_fixedPT(uint16_t in, uint16_t out)
 {
-    sendString("Estimated gain: ", 0);
+    
+    sendString("Calculated gain: ", 0);
     //Print the Whole Number
     uint16_t wholeNumber = 0, decimalCode = 0;
     
@@ -82,7 +85,16 @@ void calculateGain_fixedPT(uint16_t in, uint16_t out)
         //Print /n/r
         END_OF_LINE;
     }
+    TIMING_LED_SetLow();
+}
+
+void calculateGain_floatingPT(uint16_t in, uint16_t out)
+{
+    TIMING_LED_SetHigh();
+    float gain = (float) out / in;
+    TIMING_LED_SetLow();
     
+    printf("Calculated gain: %3.4f\n\r", gain);
 }
 
 //Changes the gain of the OPA module using a simple state machine
@@ -118,12 +130,6 @@ void changeGain(void)
     }
     
     OPA1_SetResistorLadder((OPA1_resistor_select) gain);
-}
-
-void calculateGain_floatingPT(uint16_t in, uint16_t out)
-{
-    float gain = (float) out / in;
-    printf("Estimated gain: %3.4f\n\r", gain);
 }
 
 //Returns the difference between the gains

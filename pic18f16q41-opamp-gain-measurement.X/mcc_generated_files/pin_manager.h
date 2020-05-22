@@ -97,6 +97,26 @@
 #define RA4_SetAnalogMode()         do { ANSELAbits.ANSELA4 = 1; } while(0)
 #define RA4_SetDigitalMode()        do { ANSELAbits.ANSELA4 = 0; } while(0)
 
+// get/set TIMING_LED aliases
+#define TIMING_LED_TRIS                 TRISAbits.TRISA5
+#define TIMING_LED_LAT                  LATAbits.LATA5
+#define TIMING_LED_PORT                 PORTAbits.RA5
+#define TIMING_LED_WPU                  WPUAbits.WPUA5
+#define TIMING_LED_OD                   ODCONAbits.ODCA5
+#define TIMING_LED_ANS                  ANSELAbits.ANSELA5
+#define TIMING_LED_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
+#define TIMING_LED_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
+#define TIMING_LED_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
+#define TIMING_LED_GetValue()           PORTAbits.RA5
+#define TIMING_LED_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
+#define TIMING_LED_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
+#define TIMING_LED_SetPullup()          do { WPUAbits.WPUA5 = 1; } while(0)
+#define TIMING_LED_ResetPullup()        do { WPUAbits.WPUA5 = 0; } while(0)
+#define TIMING_LED_SetPushPull()        do { ODCONAbits.ODCA5 = 0; } while(0)
+#define TIMING_LED_SetOpenDrain()       do { ODCONAbits.ODCA5 = 1; } while(0)
+#define TIMING_LED_SetAnalogMode()      do { ANSELAbits.ANSELA5 = 1; } while(0)
+#define TIMING_LED_SetDigitalMode()     do { ANSELAbits.ANSELA5 = 0; } while(0)
+
 // get/set RB5 procedures
 #define RB5_SetHigh()            do { LATBbits.LATB5 = 1; } while(0)
 #define RB5_SetLow()             do { LATBbits.LATB5 = 0; } while(0)

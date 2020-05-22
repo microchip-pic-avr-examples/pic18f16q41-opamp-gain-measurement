@@ -40,7 +40,6 @@
       </logicalFolder>
       <itemPath>OPAconfig.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>newmain.c</itemPath>
       <itemPath>utility.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"

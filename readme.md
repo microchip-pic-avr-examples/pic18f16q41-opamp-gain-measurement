@@ -40,8 +40,11 @@ Note:
 | Pin | Function
 | --- | --------
 | RA2 | LED D6 - Measuring indicator LED
+| RA5 | LED D4 - Timing Indicator (1)
 | RC0 | *(if used)* Potentiometer on the Curiosity board
 
+**Note**<br>
+1. Used as a tool to show that floating points are much slower than fixed point operations. LED is on when division is occurring. Integrate the active time of the waveform to find the difference.
 
 ## Operation
 Out of the box, this program does automatic gain switching to demonstrate the measurements. Every time the program prints the current gain, it changes the gain.
@@ -51,7 +54,7 @@ The order of the gains is 1 (Unity Gain), 16/15, 8/7, 4/3 , 2, 8/3, 4, 8, and th
 During conversion and printing, LED D6 is on. It should appear as a brief blink every 10 seconds.
 The gain calculated is printed through the UART at 9600 baud.
 
-The program can be run in fixed point or floating point mode - in fixed point, resolution is limited is limited to +- 1/16, but the program is faster and much smaller. In floating point mode, resolution is much better, but the program is much bigger and slower.
+The program can be run in fixed point or floating point mode - in fixed point, resolution is limited is limited to +- 0.0625, but the code is much faster and much smaller. In floating point mode, resolution is much better, but the program is much bigger and slower.
 
 The default configuration is floating point mode.
 
