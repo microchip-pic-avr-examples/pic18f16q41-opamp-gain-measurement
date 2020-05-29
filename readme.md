@@ -18,7 +18,6 @@ TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 
 ## Hardware Used
 
-* <a href="https://www.microchip.com/Developmenttools/ProductDetails/ADM00393">MCP2200 USB-UART Evaluation Board (ADM00393)</a>
 * <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137) </a>
 * Power Supply or Potentiometer
   * RC0 on the Curiosity board can be used with a wire from RC0 to RB5.
@@ -28,9 +27,9 @@ TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 
 | Pin | Name     | Description
 | --- | -------- | -----------
+| RC2 | OPA1OUT  | Output of the operational amplifier
 | RB7 | UART TX  | UART TX (9600 BAUD)
 | RB5 | OPA1IN0+ | Input to the OPA module (1).
-| RC2 | OPA1OUT  | Output of the operational amplifier
 
 Note:
 1. RB5 is used so that the output is equal to gain x input. Input should be < 300mV to properly calculate the 16x range.
@@ -43,8 +42,14 @@ Note:
 | RA5 | LED D4 - Timing Indicator (1)
 | RC0 | *(if used)* Potentiometer on the Curiosity board
 
+#### Special Pins
+
+| Pin | Function
+| --- | --------
+| TX | Curiosity board UART transmit pin. Connect to RB7
+
 **Note**<br>
-1. Used as a tool to show that floating points are much slower than fixed point operations. LED is on when division is occurring. Integrate the active time of the waveform to find the difference.
+1. This pin is used as a tool to show that floating points are much slower than fixed point operations. LED is on when division is occurring. Integrate the active time of the waveform to find the difference in time.
 
 ## Operation
 Out of the box, this program does automatic gain switching to demonstrate the measurements. Every time the program prints the current gain, it changes the gain.
