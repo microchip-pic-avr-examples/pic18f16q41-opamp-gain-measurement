@@ -27,9 +27,9 @@ TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 
 | Pin | Name     | Description
 | --- | -------- | -----------
-| RC2 | OPA1OUT  | Output of the operational amplifier
 | RB7 | UART TX  | UART TX (9600 BAUD)
 | RB5 | OPA1IN0+ | Input to the OPA module (1).
+| RC2 | OPA1OUT  | Output of the operational amplifier
 
 Note:
 1. RB5 is used so that the output is equal to gain x input. Input should be < 300mV to properly calculate the 16x range.
