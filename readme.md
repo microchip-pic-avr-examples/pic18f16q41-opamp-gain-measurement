@@ -42,7 +42,7 @@ Note:
 | RA5 | LED D4 - Timing Indicator (1)
 | RC0 | *(if used)* Potentiometer on the Curiosity board
 
-#### Special Pins
+#### Additional Pins
 
 | Pin | Function
 | --- | --------
