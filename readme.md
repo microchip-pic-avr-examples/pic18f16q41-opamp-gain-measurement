@@ -23,6 +23,11 @@ TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
   * RC0 on the Curiosity board can be used with a wire from RC0 to RB5.
 
 ## Setup
+#### Wiring
+
+<img src="images/wiring.jpg" alt="Wiring Image"><br>
+*Figure 1 - Wiring Image (pin table included below)*
+
 #### External Pins
 
 | Pin | Name     | Description
@@ -64,10 +69,10 @@ The program can be run in fixed point or floating point mode - in fixed point, r
 The default configuration is floating point mode.
 
 <img src="images/FloatingPoint.PNG" alt="Floating Point Output"><br>
-*Figure 1 - Floating Point Measurement*
+*Figure 2 - Floating Point Measurement*
 
 <img src="images/FixedPoint.PNG" alt="Fixed Point Output"><br>
-*Figure 2 - Fixed Point Measurement*
+*Figure 3 - Fixed Point Measurement*
 
 
 ### Program Defines
