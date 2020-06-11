@@ -25,7 +25,7 @@ TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 ## Setup
 #### Wiring
 
-<img src="images/wiring.jpg" alt="Wiring Image"><br>
+<img src="images/wiring.JPG" alt="Wiring Image"><br>
 *Figure 1 - Wiring Image (pin table included below)*
 
 #### External Pins
