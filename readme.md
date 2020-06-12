@@ -28,7 +28,7 @@ The tech brief above will be published soon.
 
 | Wire    | Name                | Description
 | ------- | ------------------- | -----------
-| Orange  | UART Transmit       | UART TX (9600 BAUD)
+| Orange  | UART Transmit       | UART Transmit Input for the Curiosity Board
 | Green   | OPA1OUT             | Output of the operational amplifier
 
 #### Pin Table
@@ -60,7 +60,6 @@ The default configuration is floating point mode.
 
 <img src="images/FixedPoint.PNG" alt="Fixed Point Output"><br>
 *Figure 3 - Fixed Point Measurement*
-
 
 ### Program Defines
 There are 2 define statements in this example which can be used to change the behavior of the code example. Both define statements are present in the file "OPAconfig.h".
