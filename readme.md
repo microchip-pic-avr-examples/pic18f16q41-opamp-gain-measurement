@@ -5,10 +5,9 @@
 This code example measures the gain of the Operational Amplifier (OPA) module on the PIC18F16Q41. Internally, this project uses the ADCC on the device to sample both the input and the output, and then computes the gain using either fixed point or floating point numbers.
 
 ## Related Documentation
-
-<a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a><br>
 TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 
+The document referenced above will be published soon, and will be an overview of the OPA module.
 ## Software Used
 
 * <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
@@ -18,6 +17,7 @@ TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 
 ## Hardware Used
 
+* <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a><br>
 * <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137) </a>
 * Power Supply or Potentiometer
   * RC0 on the Curiosity board can be used with a wire from RC0 to RB5.
@@ -25,7 +25,7 @@ TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 ## Setup
 #### Wiring
 
-<img src="images/wiring.JPG" alt="Wiring Image" width="500"><br>
+<img src="images/wiring.JPG" alt="Wiring Image" width="700px"><br>
 *Figure 1 - Wiring Image (pin table included below)*
 
 #### External Pins
