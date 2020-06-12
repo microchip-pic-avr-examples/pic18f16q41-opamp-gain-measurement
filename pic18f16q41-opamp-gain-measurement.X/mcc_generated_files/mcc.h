@@ -55,6 +55,7 @@
 #include "interrupt_manager.h"
 #include "adcc.h"
 #include "tmr2.h"
+#include "dac2.h"
 #include "uart1.h"
 #include "opa1.h"
 

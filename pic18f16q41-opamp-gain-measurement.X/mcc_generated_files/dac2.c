@@ -1,25 +1,23 @@
 /**
-  Generated Interrupt Manager Source File
+  DAC2 Generated Driver File
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    interrupt_manager.c
+  @File Name
+    dac2.c
 
-  @Summary:
-    This is the Interrupt Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary
+    This is the generated driver implementation file for the DAC2 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  @Description:
-    This header file provides implementations for global interrupt handling.
-    For individual peripheral handlers please see the peripheral driver for
-    all modules selected in the GUI.
+  @Description
+    This source file provides APIs for DAC2.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.0
         Device            :  PIC18F16Q41
-        Driver Version    :  2.03
+        Driver Version    :  2.10
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.10 and above or later
+        Compiler          :  XC8 2.10 and above
         MPLAB 	          :  MPLAB X 5.35
 */
 
@@ -46,34 +44,33 @@
     SOFTWARE.
 */
 
-#include "interrupt_manager.h"
-#include "mcc.h"
+/**
+  Section: Included Files
+*/
 
-void  INTERRUPT_Initialize (void)
+#include <xc.h>
+#include "dac2.h"
+
+/**
+  Section: DAC2 APIs
+*/
+
+void DAC2_Initialize(void)
 {
-    // Disable Interrupt Priority Vectors (16CXXX Compatibility Mode)
-    INTCON0bits.IPEN = 0;
+    // DAC2EN enabled; NSS VSS; PSS VDD; 
+    DAC2CON = 0x80;
+    // DAC2R 10; 
+    DAC2DATL = 0x0A;
 }
 
-void __interrupt() INTERRUPT_InterruptManager (void)
+void DAC2_SetOutput(uint8_t inputData)
 {
-    // interrupt handler
-    if(PIE4bits.U1TXIE == 1 && PIR4bits.U1TXIF == 1)
-    {
-        UART1_TxInterruptHandler();
-    }
-    else if(PIE4bits.U1RXIE == 1 && PIR4bits.U1RXIF == 1)
-    {
-        UART1_RxInterruptHandler();
-    }
-    else if(PIE2bits.ADTIE == 1 && PIR2bits.ADTIF == 1)
-    {
-        ADCC_ThresholdISR();
-    }
-    else
-    {
-        //Unhandled Interrupt
-    }
+    DAC2DATL  = inputData;
+}
+
+uint8_t DAC2_GetOutput(void)
+{
+    return DAC2DATL;
 }
 /**
  End of File

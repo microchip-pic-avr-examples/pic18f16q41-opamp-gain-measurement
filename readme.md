@@ -2,12 +2,12 @@
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
 # Gain measurement of the OPA module on PIC18F16Q41
-This code example measures the gain of the Operational Amplifier (OPA) module on the PIC18F16Q41. Internally, this project uses the ADCC on the device to sample both the input and the output, and then computes the gain using either fixed point or floating point numbers.
+This code example measures the gain of the Operational Amplifier (OPA) module on the PIC18F16Q41. Internally, this project uses the ADCC on the device to sample both the input, which is derived from a DAC, and the output, then computes the gain using either fixed point or floating point numbers.
 
 ## Related Documentation
 TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 
-The document referenced above will be published soon, and will be an overview of the OPA module.
+The tech brief above will be published soon.
 ## Software Used
 
 * <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
@@ -19,21 +19,24 @@ The document referenced above will be published soon, and will be an overview of
 
 * <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a><br>
 * <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137) </a>
-* Power Supply or Potentiometer
-  * RC0 on the Curiosity board can be used with a wire from RC0 to RB5.
 
 ## Setup
 #### Wiring
 
 <img src="images/wiring.JPG" alt="Wiring Image" width="700px"><br>
-*Figure 1 - Wiring Image (pin table included below)*
+*Figure 1 - Wiring Image (pin tables included below)*
+
+| Wire    | Name                | Description
+| ------- | ------------------- | -----------
+| Orange  | UART Transmit       | UART TX (9600 BAUD)
+| Blue    | OPA1OUT             | Output of the operational amplifier
 
 #### External Pins
 
 | Pin | Name     | Description
 | --- | -------- | -----------
 | RB7 | UART TX  | UART TX (9600 BAUD)
-| RB5 | OPA1IN0+ | Input to the OPA module (1).
+| RB5 | OPA1IN0+ | Input to the OPA module<sup>1</sup>
 | RC2 | OPA1OUT  | Output of the operational amplifier
 
 Note:
@@ -44,17 +47,16 @@ Note:
 | Pin | Function
 | --- | --------
 | RA2 | LED D6 - Measuring indicator LED
-| RA5 | LED D4 - Timing Indicator (1)
-| RC0 | *(if used)* Potentiometer on the Curiosity board
+| RA5 | LED D4 - Timing Indicator<sup>1</sup>
+
+**Note**<br>
+1. This pin is used as a tool to show that floating points are much slower than fixed point operations. LED is on when division is occurring. Integrate the active time of the waveform to find the difference in time.
 
 #### Additional Pins
 
 | Pin | Function
 | --- | --------
 | TX | Curiosity board UART transmit pin. Connect to RB7
-
-**Note**<br>
-1. This pin is used as a tool to show that floating points are much slower than fixed point operations. LED is on when division is occurring. Integrate the active time of the waveform to find the difference in time.
 
 ## Operation
 Out of the box, this program does automatic gain switching to demonstrate the measurements. Every time the program prints the current gain, it changes the gain.

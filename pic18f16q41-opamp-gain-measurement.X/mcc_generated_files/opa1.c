@@ -57,8 +57,8 @@ void OPA1_Initialize(void)
     //GSEL R1 = 15R and R2 = 1R, R2/R1 = 0.07; RESON Enabled; NSS Vss; 
     OPA1CON1 = 0x0F;
 
-    //NCH No Connection; PCH OPA1IN+; 
-    OPA1CON2 = 0x02;
+    //NCH No Connection; PCH DAC2_OUT; 
+    OPA1CON2 = 0x05;
 
     //FMS OPA1OUT; PSS OPA1IN0+; 
     OPA1CON3 = 0x80;

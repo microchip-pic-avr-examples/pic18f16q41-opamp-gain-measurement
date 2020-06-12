@@ -15,6 +15,7 @@
         <itemPath>mcc_generated_files/device_config.h</itemPath>
         <itemPath>mcc_generated_files/opa1.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
+        <itemPath>mcc_generated_files/dac2.h</itemPath>
       </logicalFolder>
       <itemPath>OPAconfig.h</itemPath>
       <itemPath>utility.h</itemPath>
@@ -37,6 +38,7 @@
         <itemPath>mcc_generated_files/uart1.c</itemPath>
         <itemPath>mcc_generated_files/opa1.c</itemPath>
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
+        <itemPath>mcc_generated_files/dac2.c</itemPath>
       </logicalFolder>
       <itemPath>OPAconfig.c</itemPath>
       <itemPath>main.c</itemPath>
@@ -260,7 +262,7 @@
         <targetDevice>PIC18F16Q41</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pk4hybrid</platformTool>
+        <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.20</languageToolchainVersion>
         <platform>3</platform>
