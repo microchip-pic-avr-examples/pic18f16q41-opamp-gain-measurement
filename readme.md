@@ -47,11 +47,7 @@ Note:
 2. This pin is used as a tool to show that floating points are much slower than fixed point operations. LED is on when division is occurring. Integrate the active time of the waveform to find the difference in execution time.
 
 ## Operation
-Out of the box, this program does automatic gain switching to demonstrate the measurements. Every time the program prints the current gain, it changes the gain. The order of the gains is 1 (Unity Gain), 16/15, 8/7, 4/3 , 2, 8/3, 4, 8, and then 16. During the gain calculation routines, LED D6 is on. It should appear as a brief blink every 10 seconds, and can be used to measure the execution time. The gain calculated is printed through the UART at 9600 baud.
-
-The program can be run in fixed point or floating point mode - in fixed point, resolution is limited is limited to +- 0.0625, but the code is much faster and much smaller. In floating point mode, resolution is much better, but the program is much bigger and slower.
-
-The default configuration is floating point mode.
+Out of the box, this program does automatic gain switching to demonstrate the measurements. Every time the program prints the current gain, it changes the gain. The order of the gains is 1 (Unity Gain), 16/15, 8/7, 4/3 , 2, 8/3, 4, 8, and then 16. During the gain calculation routines, LED D6 is on. It should appear as a brief blink every 10 seconds, and can be used to measure the execution time. The gain calculated is printed through the UART at 9600 baud. The program can be run in fixed point or floating point mode - in fixed point, resolution is limited is limited to +- 0.0625, but the code is much faster and much smaller. In floating point mode, resolution is much better, but the program is much bigger and slower. The default configuration is floating point mode.
 
 <img src="images/FloatingPoint.PNG" alt="Floating Point Output"><br>
 *Figure 2 - Floating Point Measurement*
