@@ -31,32 +31,20 @@ The tech brief above will be published soon.
 | Orange  | UART Transmit       | UART TX (9600 BAUD)
 | Green   | OPA1OUT             | Output of the operational amplifier
 
-#### External Pins
+#### Pin Table
 
-| Pin | Name     | Description
-| --- | -------- | -----------
-| RB7 | UART TX  | UART TX (9600 BAUD)
-| RB5 | OPA1IN0+ | Input to the OPA module<sup>1</sup>
-| RC2 | OPA1OUT  | Output of the operational amplifier
+| Pin | Name          | Description
+| --- | ------------- | -----------
+| RC2 | OPA1OUT       | Output of the operational amplifier
+| RB7 | UART TX       | UART TX (9600 BAUD)
+| RB5 | OPA1IN0+      | Input to the OPA module<sup>1</sup>
+| RA2 | LED D6        | Measuring indicator LED
+| RA5 | LED D4        | Timing Indicator<sup>2</sup>
+| TX  | UART TX Input |Curiosity board UART transmit pin. Connect to RB7
 
 Note:
 1. RB5 is used so that the output is equal to gain x input. Input should be < 300mV to properly calculate the 16x range.
-
-#### Curiosity Board Parts
-
-| Pin | Function
-| --- | --------
-| RA2 | LED D6 - Measuring indicator LED
-| RA5 | LED D4 - Timing Indicator<sup>1</sup>
-
-**Note**<br>
-1. This pin is used as a tool to show that floating points are much slower than fixed point operations. LED is on when division is occurring. Integrate the active time of the waveform to find the difference in time.
-
-#### Additional Pins
-
-| Pin | Function
-| --- | --------
-| TX | Curiosity board UART transmit pin. Connect to RB7
+2. This pin is used as a tool to show that floating points are much slower than fixed point operations. LED is on when division is occurring. Integrate the active time of the waveform to find the difference in execution time.
 
 ## Operation
 Out of the box, this program does automatic gain switching to demonstrate the measurements. Every time the program prints the current gain, it changes the gain.
