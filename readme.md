@@ -29,7 +29,7 @@ The tech brief above will be published soon.
 | Wire    | Name                | Description
 | ------- | ------------------- | -----------
 | Orange  | UART Transmit       | UART TX (9600 BAUD)
-| Blue    | OPA1OUT             | Output of the operational amplifier
+| Green   | OPA1OUT             | Output of the operational amplifier
 
 #### External Pins
 
