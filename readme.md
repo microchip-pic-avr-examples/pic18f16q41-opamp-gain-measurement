@@ -40,19 +40,16 @@ The tech brief above will be published soon.
 | RB5 | OPA1IN0+      | Input to the OPA module<sup>1</sup>
 | RA2 | LED D6        | Measuring indicator LED
 | RA5 | LED D4        | Timing Indicator<sup>2</sup>
-| TX  | UART TX Input |Curiosity board UART transmit pin. Connect to RB7
+| TX  | UART TX Input | Curiosity board UART transmit pin. Connect to RB7
 
 Note:
 1. RB5 is used so that the output is equal to gain x input. Input should be < 300mV to properly calculate the 16x range.
 2. This pin is used as a tool to show that floating points are much slower than fixed point operations. LED is on when division is occurring. Integrate the active time of the waveform to find the difference in execution time.
 
 ## Operation
-Out of the box, this program does automatic gain switching to demonstrate the measurements. Every time the program prints the current gain, it changes the gain.
+Out of the box, this program does automatic gain switching to demonstrate the measurements. Every time the program prints the current gain, it changes the gain. The order of the gains is 1 (Unity Gain), 16/15, 8/7, 4/3 , 2, 8/3, 4, 8, and then 16.
 
-The order of the gains is 1 (Unity Gain), 16/15, 8/7, 4/3 , 2, 8/3, 4, 8, and then 16.
-
-During conversion and printing, LED D6 is on. It should appear as a brief blink every 10 seconds.
-The gain calculated is printed through the UART at 9600 baud.
+During the gain calculation routines, LED D6 is on. It should appear as a brief blink every 10 seconds, and can be used to measure the execution time. The gain calculated is printed through the UART at 9600 baud.
 
 The program can be run in fixed point or floating point mode - in fixed point, resolution is limited is limited to +- 0.0625, but the code is much faster and much smaller. In floating point mode, resolution is much better, but the program is much bigger and slower.
 
