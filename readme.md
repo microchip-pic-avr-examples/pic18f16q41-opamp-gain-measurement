@@ -89,14 +89,6 @@ There are 2 define statements in this example which can be used to change the be
 **Note:**
   1. To use external gain resistors, a reconfiguration of the OPA module in MCC is required.
 
-### Analog Troubleshooting
-#### Incorrect Gains
-This program is dependent on RB5's input to determine the gain of the operational amplifier. For proper operation, RB5 should be <300mV to ensure proper operation for the internal gain of 16. User defined gains may have different requirements.
-
-If a source or potentiometer is unavailable, one of the DACs can be repurposed as a substitute for RB5's input.
-
-For further verification, RC2 is always the output of the OPA module if the module is enabled and running. The output should be 1 step above the last printed statement (ex: if gain was estimated around 2, the current gain should be 4).
-
 ## Summary
 This example shows the programmable gain functionality of the OPA module, and then measures the gain of the amplifier.
 
