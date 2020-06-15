@@ -59,7 +59,7 @@ Out of the box, this program does automatic gain switching to demonstrate the me
 There are 2 define statements in this example which can be used to change the behavior of the code example. Both define statements are present in the file "OPAconfig.h".
 
 - **ENABLE_CHANGING_GAIN**
-  - This option disables the gain switching demo on the code example. For correct operation, this option **must be disabled** when using external resistors (1). Gain measurement limit is 999.
+  - This option disables the gain switching demo on the code example. For correct operation, this option **must be disabled** when using external resistors<sup>(1)</sup>. Gain measurement limit is 999.
 
 - **ENABLE_FLOATING_PT**
   - This option selects the use of floating points for gain calculation, rather than fixed point numbers. Enabling this option provides an increase in the accuracy of the gain measurement, however it significantly increases code size and computation time.
