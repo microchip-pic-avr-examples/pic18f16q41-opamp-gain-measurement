@@ -5,9 +5,8 @@
 This code example measures the gain of the Operational Amplifier (OPA) module on the PIC18F16Q41. This project uses the on-board Analog-to-Digital Converter w/ Computation (ADCC) to sample both the input, which is derived from a DAC, and the OPA output, then computes the gain using either fixed point or floating point numbers.
 
 ## Related Documentation
-TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
+TBxxxx: Using Operational Amplifiers in PIC16 and PIC18<br>
 
-The tech brief above will be published soon.
 ## Software Used
 
 * <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
