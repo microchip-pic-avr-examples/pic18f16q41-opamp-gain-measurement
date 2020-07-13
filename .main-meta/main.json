@@ -1,0 +1,77 @@
+{
+    "metaDataVersion": "1.0.0",
+    "category": "com.microchip.ide.project",
+    "content": {
+        "metaDataVersion": "1.1.0",
+        "name": "com.microchip.mcu8.mplabx.project.pic18f16q41-opamp-gain-measurement",
+        "version": "1.0.0",
+        "displayName": "Measuring Gain with the PIC18F16Q41",
+        "projectName": "pic18f16q41-opamp-gain-measurement",
+        "shortDescription": "PIC18F16Q41 Measuring the Gain of the Operational Amplifier",
+        "ide": {
+            "name": "MPLABX",
+            "semverRange": ">=5.40.0"
+        },
+        "compiler": [
+			{
+				"name": "XC8",
+				"semverRange": "^2.20.0"
+			}
+		],
+        "dfp": {
+            "name": "PIC18F-Q_DFP",
+            "semverRange": "^1.5.124"
+        },
+        "configurator": {
+            "name": "MCC",
+            "semverRange": ">=3.95.0"
+        },
+        "device": {
+            "metaDataVersion": "1.0.0",
+            "category": "com.microchip.portal.contentRef",
+            "content": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.device",
+                "name": "PIC18F16Q41",
+                "versionRange": "*"
+            }
+        },
+        "author": "Microchip",
+        "subcategories": [
+            "MCC",
+            [
+               "Peripherals", "OPA"
+            ],
+            [
+               "Peripherals", "UART"
+            ],
+            [
+               "Peripherals", "ADCC"
+            ],
+            [
+               "Peripherals", "DAC"
+            ],
+            [
+               "Peripherals", "TMR2"
+            ]
+        ],
+        "peripherals": [
+            "OPA","UART","ADCC","DAC","TMR2"
+        ],
+        "keywords": [
+            "MCC",
+            "Intelligent Analog"
+        ],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
