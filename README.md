@@ -5,7 +5,10 @@
 This code example measures the gain of the Operational Amplifier (OPA) module on the PIC18F16Q41. This project uses the on-board Analog-to-Digital Converter w/ Computation (ADCC) to sample both the input, which is derived from a DAC, and the OPA output, then computes the gain using either fixed point or floating point numbers.
 
 ## Related Documentation
-TBxxxx: Using Operational Amplifiers in PIC16 and PIC18<br>
+[TB3280: Using Operational Amplifiers in PIC16 and PIC18](http://ww1.microchip.com/downloads/en/DeviceDoc/Using-the-Operational-Amplifier-on-PIC16-and-PIC18-90003280A.pdf)  
+
+[Code Example: Gain and Offset Calibration of the Analog Signal Conditioning (OPAMP) Peripheral (MPLAB)](https://github.com/microchip-pic-avr-examples/avr128db48-opamp-gain-and-offset-calibration-mplab)  
+[Code Example: Gain and Offset Calibration of the Analog Signal Conditioning (OPAMP) Peripheral (Studio)](https://github.com/microchip-pic-avr-examples/avr128db48-opamp-gain-and-offset-calibration)  
 
 ## Software Used
 
