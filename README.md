@@ -2,7 +2,7 @@
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
 # Gain measurement of the OPA module on PIC18F16Q41
-This code example measures the gain of the Operational Amplifier (OPA) module on the PIC18F16Q41. This project uses the on-board Analog-to-Digital Converter w/ Computation (ADCC) to sample both the input, which is derived from a DAC, and the OPA output, then computes the gain using either fixed point or floating point numbers.
+This code example measures the gain of the Operational Amplifier (OPA) module on the PIC18F16Q41. This project uses the on-board Analog-to-Digital Converter w/ Computation (ADCC) to sample both the input, which is derived from a DAC, and the OPA output, then computes the gain using either fixed point or floating point numbers.  
 
 ## Related Documentation
 [TB3280: Using Operational Amplifiers in PIC16 and PIC18](http://ww1.microchip.com/downloads/en/DeviceDoc/Using-the-Operational-Amplifier-on-PIC16-and-PIC18-90003280A.pdf)  
