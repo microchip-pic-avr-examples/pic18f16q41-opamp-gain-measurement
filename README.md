@@ -12,9 +12,9 @@ This code example measures the gain of the Operational Amplifier (OPA) module on
 
 ## Software Used
 
-* <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
-* <a href="https://www.microchip.com/mplab/compilers">Microchip XC8 Compiler 2.20 or newer</a>
-* <a href="https://www.microchip.com/mplab/mplab-code-configurator">MPLAB® Code Configurator (MCC) 3.95.0 or newer</a>
+* <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 6.20 or newer</a>
+* <a href="https://www.microchip.com/mplab/compilers">Microchip XC8 Compiler 3.00 or newer</a>
+* <a href="https://www.microchip.com/mplab/mplab-code-configurator">MPLAB® Code Configurator (MCC)</a>
 * Serial Terminal
 
 ## Hardware Used
